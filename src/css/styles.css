@@ -1,25 +1,141 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
-
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Montserrat', Inter, Avenir, Helvetica, sans-serif;
+  line-height: 24px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.search-image-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  max-width: 371px;
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-bottom: 32px;
+}
+input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+input:hover {
+  border: 1px solid #000000;
+}
+input:focus {
+  border: 1px solid #4e75ff;
+}
+button {
+  box-sizing: border-box;
+  padding: 8px 16px 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+button:hover {
+  background: #6c8cff;
+}
+.loader {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  margin: 15px auto;
+  border-radius: 50%;
+  color: #000;
+  animation: animloader 2s linear infinite;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+}
+a:hover {
+  cursor: pointer;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+li {
+  box-sizing: border-box;
+  width: 360px;
+  height: 200px;
+  border: 1px solid #000000;
+}
+.gallery-image {
+  object-fit: cover;
+  width: 360px;
+  height: 150px;
+}
+.text-div {
+  display: flex;
+  gap: 28px;
+  padding: 4px 0;
+}
+p {
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
